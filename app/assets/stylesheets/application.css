@@ -17,24 +17,33 @@ body {
   top: 0;
   width: 100;
   margin: 0;
+  display: block;
 }
 
 .navbar {
+  overflow: hidden;
   position: fixed;
   top: 0;
-  float: left;
+  /* float: left; */
   width: 100%;
   background-color: aqua;
   margin: 0;
-  padding: 10px;
+  padding: 0;
 }
 
 .navbar li {
   display: inline;
-  margin: 10px;
-  /* padding: 10px; */
+  float: left;
+  padding: 10px;
+}
+.navbar li:hover {
+  background-color: blue;
 }
 
 .nav-link {
   text-decoration: none;
+}
+
+.page-title {
+  margin-top: 40px;
 }

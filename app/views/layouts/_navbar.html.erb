@@ -5,4 +5,11 @@
   <li>
     <%= link_to "Events", events_path, class: "nav-link"%>
   </li>
+  <li>
+    <% begin %>
+      <%= link_to User.find(session[:user]).username, User.find(session[:user]) %>
+      <%rescue%>
+      <%= link_to "Sign In", "users/sign_in.html.erb"%>
+    <% end %>
+  </li>
 </ul>
