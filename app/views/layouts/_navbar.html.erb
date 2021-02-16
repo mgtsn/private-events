@@ -9,7 +9,7 @@
     <% begin %>
       <%= link_to User.find(session[:user]).username, User.find(session[:user]) %>
       <%rescue%>
-      <%= link_to "Sign In", "users/sign_in.html.erb"%>
+      <%= link_to "Sign In", new_session_path, class: "nav-link"%>
     <% end %>
   </li>
 </ul>

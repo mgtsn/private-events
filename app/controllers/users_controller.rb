@@ -6,9 +6,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def signin
-  end
-
   # GET /users/1 or /users/1.json
   def show
   end
