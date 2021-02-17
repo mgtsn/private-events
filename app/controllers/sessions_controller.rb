@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
       render "new", notice: "Invalid name"
     end
   end
+
+  def destroy
+    session[:user] = nil
+    redirect_to users_path
+  end
 end

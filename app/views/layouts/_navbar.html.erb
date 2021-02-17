@@ -5,11 +5,19 @@
   <li>
     <%= link_to "Events", events_path, class: "nav-link"%>
   </li>
-  <li>
-    <% begin %>
+  <% if User.exists?(id: session[:user]) %>
+    <li>
+      <%= link_to 'Sign Out', signout_path%>
+    </li>
+    <li>
       <%= link_to User.find(session[:user]).username, User.find(session[:user]) %>
-      <%rescue%>
-      <%= link_to "Sign In", new_session_path, class: "nav-link"%>
-    <% end %>
-  </li>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to "Sign In", signin_path %>
+    </li>
+    <li>
+      <%= link_to "Sign Up", new_user_path %>
+    </li>
+  <% end %>
 </ul>
