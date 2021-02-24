@@ -14,6 +14,10 @@
   <strong>Creator:</strong>
   <%= link_to @event.creator.username, @event.creator %>
 </p>
+<p>
+  <strong>Attend</strong>
+  <%= link_to "Attend", new_attending_path  %>
+</p>
 <p>Attendees </p>
 <% @event.attendees.each do |user| %>
   <%= link_to user.username, user %>
