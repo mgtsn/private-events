@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'attendings/create'
   get "signin", to: "sessions#new", as: "signin"
   get "signout", to: "sessions#destroy", as: "signout"
 

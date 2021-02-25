@@ -16,7 +16,7 @@
 </p>
 <p>
   <strong>Attend</strong>
-  <%= link_to "Attend", new_attending_path  %>
+  <%= button_to "Attend", attending_path(event_id: @event.id), method: :create %>
 </p>
 <p>Attendees </p>
 <% @event.attendees.each do |user| %>
