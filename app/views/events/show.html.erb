@@ -16,7 +16,8 @@
 </p>
 <p>
   <strong>Attend</strong>
-  <%= button_to "Attend", attending_path(event_id: @event.id), method: :create %>
+  <%= link_to "Attend" %>
+  <%# add a button_to that links to attendings index and has paramaters %>
 </p>
 <p>Attendees </p>
 <% @event.attendees.each do |user| %>
